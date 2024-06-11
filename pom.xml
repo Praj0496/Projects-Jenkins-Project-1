@@ -1,41 +1,16 @@
-// This code will prompt the user to enter a year and then it will print whether the entered year is a leap year or not.
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-import java.util.Scanner;
+    <groupId>com.java.app</groupId>
+    <artifactId>leap-year-checker</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
 
-public class Main {
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
-  public static void main(String[] args) {
-
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Enter a year:");
-    int year = scanner.nextInt();
-    boolean leap = false;
-
-    // if the year is divided by 4
-    if (year % 4 == 0) {
-
-      // if the year is century
-      if (year % 100 == 0) {
-
-        // if year is divided by 400
-        // then it is a leap year
-        if (year % 400 == 0)
-          leap = true;
-        else
-          leap = false;
-      }
-      
-      // if the year is not century
-      else
-        leap = true;
-    }
-    
-    else
-      leap = false;
-
-    if(leap)
-      System.out.println(year + " is a leap year.");
-    else
-      System.out.println(year + " is not a leap year.");
-  }
-}
+</project>
